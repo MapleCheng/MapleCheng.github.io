@@ -8,7 +8,7 @@
   </head>
   <body>
     <button id="btnShare" onclick="sendShare()">test</button>
-    <button id="btnLogOut" onclick="Click()">test</button>
+    <button id="btnLogOut" onclick="logOut()">Log Out</button>
   </body>
   <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
   <script>
@@ -128,6 +128,11 @@
           alert("ShareTargetPicker was canceled in LINE app");
         }
       }
+    }
+
+    function logOut() {
+      liff.logout();
+      window.location.reload();
     }
 
     async function main() {
